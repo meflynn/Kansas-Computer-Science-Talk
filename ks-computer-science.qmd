@@ -59,7 +59,7 @@ basesize <- 11
 :::
 
 :::{.column width="50%"}
-![](book-cover-medium.jpeg){width=400 height=600 fig-align="center" fig-pos="middle"}
+![](./images/book-cover-medium.jpeg){width=400 height=600 fig-align="center" fig-pos="middle"}
 :::
 
 ::::
@@ -72,11 +72,11 @@ basesize <- 11
 
 ::::{.columns}
 :::{.column}
-![](fry-meme.jpeg){width=90%}
+![](./images/fry-meme.jpeg){width=90%}
 :::
 
 :::{.column}
-![](coding-horse.jpeg){width=90%}
+![](images/coding-horse.jpeg){width=90%}
 :::
 
 ::::
@@ -111,9 +111,37 @@ basesize <- 11
 :::
 ::::
 
-## What's It Look Like?
 
 
-![](workflow-mermaid.png){width=85% fig-pos="center"}
+## Social Science Workflow?
+
+![](./images/workflow-slides/Slide1.png){.absolute top=45 left=-40 width=100%}
 
 
+## Social Science Workflow?
+
+![](./images/workflow-slides/Slide2.png){.absolute top=45 left=-40 width=100%}
+
+
+## Social Science Workflow?
+
+![](./images/workflow-slides/Slide3.png){.absolute top=45 left=-40 width=100%}
+
+
+
+## Social Science Workflow?
+
+![](./images/workflow-slides/Slide4.png){.absolute top=45 left=-40 width=100%}
+
+
+
+## Social Science Workflow?
+
+![](./images/workflow-slides/Slide5.png){.absolute top=45 left=-40 width=100%}
+
+
+
+
+## Social Science Workflow?
+
+![](./images/hex-stickers.png){width=45% fig-pos="center"}

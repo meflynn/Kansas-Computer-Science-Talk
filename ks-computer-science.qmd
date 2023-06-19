@@ -1,0 +1,119 @@
+---
+title: "Computer Science Teacher’s Association"
+subtitle: "Computer Science and the Social Sciences"
+author: 
+  - Michael Flynn
+institute:
+  - Department of Political Science
+  - 011C Calvin Hall
+  - meflynn@ksu.edu
+date:  "Last Updated `r Sys.Date()`"
+format:
+  revealjs:
+    theme: [quarto-lecture-theme.scss, default]
+    #css: quarto-lecture-theme.css
+    auto-stretch: false # Needed to stop figures from stretching and ignoring figure size
+    slide-number: true
+    chalkboard: true
+    height: 900
+    width: 1600
+    #incremental: true
+title-slide-attributes:
+    data-background-image: "ksu-seal.png"
+    data-background-size: 45%
+    data-background-position: bottom -38% right -19%
+    height: 700
+    width: 1050
+---
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(here)
+library(flynnprojects)
+library(scales)
+library(kableExtra)
+
+showtext::showtext_auto()
+showtext::showtext_opts(dpi = 300)
+
+#knitr::opts_chunk$set(fig.width=8, fig.height=5, fig.align="center", fig.pos = "middle", echo=FALSE, warning=FALSE, error=FALSE, message=FALSE, dpi=400) 
+
+basesize <- 11
+```
+
+
+## Overview
+
+### About me:
+
+::::{.columns}
+:::{.column width="50%"}
+- Political Scientist
+
+- Research focus:
+  - US foreign policy
+  - Political economy of security cooperation
+  - Social, political, and economic effects of US military deployments
+  - Statistical research methods
+:::
+
+:::{.column width="50%"}
+![](book-cover-medium.jpeg){width=400 height=600 fig-align="center" fig-pos="middle"}
+:::
+
+::::
+
+
+# Social Science Workflow
+
+
+## A Disclaimer
+
+::::{.columns}
+:::{.column}
+![](fry-meme.jpeg){width=90%}
+:::
+
+:::{.column}
+![](coding-horse.jpeg){width=90%}
+:::
+
+::::
+
+
+## Learn To Code!
+
+### Sure, but what?
+
+::::{.columns}
+:::{.column}
+  - HTML
+  - CSS
+  - SCSS
+  - C++
+  - Ruby
+  - Matlab
+  - Perl
+  - SAS
+  - R
+:::
+:::{.column}
+  - SPSS
+  - Stata
+  - Stan
+  - Python
+  - Julia
+  - SQL
+  - Markdown
+  - LaTex
+  - Etc.
+:::
+::::
+
+## What's It Look Like?
+
+
+![](workflow-mermaid.png){width=85% fig-pos="center"}
+
+

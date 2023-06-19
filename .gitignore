@@ -4,9 +4,5 @@
 .httr-oauth
 .DS_Store
 .quarto
-*.png
-*.jpeg
-
-*images/
 
 /.quarto/

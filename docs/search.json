@@ -2,64 +2,120 @@
   {
     "objectID": "ks-computer-science.html#overview",
     "href": "ks-computer-science.html#overview",
-    "title": "Computer Science Teacher’s Association",
+    "title": "Computer Science and the Social Sciences",
     "section": "Overview",
-    "text": "Overview\nAbout me:\n\n\n\nPolitical Scientist\nResearch focus:\n\nUS foreign policy\nPolitical economy of security cooperation\nSocial, political, and economic effects of US military deployments\nStatistical research methods"
+    "text": "Overview\n\nA little bit of background about me\nTalk about what my workflow looks like\nShow which languages/software works with various stages\nExamples"
+  },
+  {
+    "objectID": "ks-computer-science.html#about-me",
+    "href": "ks-computer-science.html#about-me",
+    "title": "Computer Science and the Social Sciences",
+    "section": "About me",
+    "text": "About me\nSome background info:\n\n\n\nPolitical Scientist\nResearch focus:\n\nUS foreign policy\nPolitical economy of security cooperation\nSocial, political, and economic effects of US military deployments\nStatistical research methods"
+  },
+  {
+    "objectID": "ks-computer-science.html#goals",
+    "href": "ks-computer-science.html#goals",
+    "title": "Computer Science and the Social Sciences",
+    "section": "Goals",
+    "text": "Goals\nWhat is it we want to do?\nA few things:\n\nAnswer some question about the world\nCausal inference\nDescription\nPrediction\n\nRegardless of specifics we want to make our work…\n\nVerifiable\nReproducible (Someone can get the same results by using our data)\nReplicable (Someone can get the consistent results using new/different data)"
+  },
+  {
+    "objectID": "ks-computer-science.html#methods",
+    "href": "ks-computer-science.html#methods",
+    "title": "Computer Science and the Social Sciences",
+    "section": "Methods",
+    "text": "Methods\nHow do we do what we do?\nIn my case…\n\nLots of statistical data analysis\nRequires wrangling large amounts of data (Typically looks like a spreadsheet)\nAnalyzing that data\nWriting up articles or reports based on results"
   },
   {
     "objectID": "ks-computer-science.html#a-disclaimer",
     "href": "ks-computer-science.html#a-disclaimer",
-    "title": "Computer Science Teacher’s Association",
+    "title": "Computer Science and the Social Sciences",
     "section": "A Disclaimer",
     "text": "A Disclaimer"
   },
   {
     "objectID": "ks-computer-science.html#learn-to-code",
     "href": "ks-computer-science.html#learn-to-code",
-    "title": "Computer Science Teacher’s Association",
+    "title": "Computer Science and the Social Sciences",
     "section": "Learn To Code!",
     "text": "Learn To Code!\nSure, but what?\n\n\n\nHTML\nCSS\nSCSS\nC++\nRuby\nMatlab\nPerl\nSAS\nR\n\n\n\nSPSS\nStata\nStan\nPython\nJulia\nSQL\nMarkdown\nLaTex\nEtc."
   },
   {
     "objectID": "ks-computer-science.html#social-science-workflow-1",
     "href": "ks-computer-science.html#social-science-workflow-1",
-    "title": "Computer Science Teacher’s Association",
+    "title": "Computer Science and the Social Sciences",
     "section": "Social Science Workflow?",
     "text": "Social Science Workflow?"
   },
   {
     "objectID": "ks-computer-science.html#social-science-workflow-2",
     "href": "ks-computer-science.html#social-science-workflow-2",
-    "title": "Computer Science Teacher’s Association",
+    "title": "Computer Science and the Social Sciences",
     "section": "Social Science Workflow?",
     "text": "Social Science Workflow?"
   },
   {
     "objectID": "ks-computer-science.html#social-science-workflow-3",
     "href": "ks-computer-science.html#social-science-workflow-3",
-    "title": "Computer Science Teacher’s Association",
+    "title": "Computer Science and the Social Sciences",
     "section": "Social Science Workflow?",
     "text": "Social Science Workflow?"
   },
   {
     "objectID": "ks-computer-science.html#social-science-workflow-4",
     "href": "ks-computer-science.html#social-science-workflow-4",
-    "title": "Computer Science Teacher’s Association",
+    "title": "Computer Science and the Social Sciences",
     "section": "Social Science Workflow?",
     "text": "Social Science Workflow?"
   },
   {
     "objectID": "ks-computer-science.html#social-science-workflow-5",
     "href": "ks-computer-science.html#social-science-workflow-5",
-    "title": "Computer Science Teacher’s Association",
+    "title": "Computer Science and the Social Sciences",
     "section": "Social Science Workflow?",
     "text": "Social Science Workflow?"
   },
   {
     "objectID": "ks-computer-science.html#social-science-workflow-6",
     "href": "ks-computer-science.html#social-science-workflow-6",
-    "title": "Computer Science Teacher’s Association",
+    "title": "Computer Science and the Social Sciences",
     "section": "Social Science Workflow?",
     "text": "Social Science Workflow?"
+  },
+  {
+    "objectID": "ks-computer-science.html#social-science-workflow-7",
+    "href": "ks-computer-science.html#social-science-workflow-7",
+    "title": "Computer Science and the Social Sciences",
+    "section": "Social Science Workflow?",
+    "text": "Social Science Workflow?\nReasons to like R\n\n\n\n\nIt’s free!\nOpen source\nWidely used in academia, government, industry, etc.\nAccessible\nStatistical analysis\nWriting\nDistribution\nWeb scraping\nData management\nIntegrates with several other languages"
+  },
+  {
+    "objectID": "ks-computer-science.html#data-analysis",
+    "href": "ks-computer-science.html#data-analysis",
+    "title": "Computer Science and the Social Sciences",
+    "section": "Data Analysis",
+    "text": "Data Analysis\nYou can make great slides like these with Quarto, and even include code chunks and output!\n\n\nlibrary(flynnprojects) # Load library for theme\nlibrary(tidyverse) # Load tidyverse\n\ndata &lt;- tibble(x = rnorm(n = 1e4, # Generate some fake data. 10k obs with mean at 0 and standard deviation of 2\n                         mean = 0,\n                         sd = 2))\n\nggplot(data, aes(x = x)) + # Plot the data\n  geom_density() +\n  theme_flynn() +\n  labs(x = \"x\",\n       y = \"Density\")"
+  },
+  {
+    "objectID": "ks-computer-science.html#maps",
+    "href": "ks-computer-science.html#maps",
+    "title": "Computer Science and the Social Sciences",
+    "section": "Maps",
+    "text": "Maps\n\n\nlibrary(sf)\n#devtools::install_github(\"UrbanInstitute/urbnmapr\")\nlibrary(urbnmapr)\n\nmap &lt;- get_urbn_map(map = \"counties\",\n                    sf = TRUE)\n\nggplot() +\n  geom_sf(data = map, \n          aes(geometry = geometry,\n              fill = state_abbv == \"KS\")) +\n  guides(fill = \"none\") +\n  theme_void() + \n  viridis::scale_fill_viridis(discrete = TRUE,\n                              option = \"magma\",\n                              begin = 0.2,\n                              end = 0.9,\n                              direction = -1)"
+  },
+  {
+    "objectID": "ks-computer-science.html#web-scraping",
+    "href": "ks-computer-science.html#web-scraping",
+    "title": "Computer Science and the Social Sciences",
+    "section": "Web Scraping",
+    "text": "Web Scraping\n\n\nlibrary(flynnprojects)\nlibrary(rvest) # Load rvest package for web scraping\nsysfonts::font_add_google(\"Oswald\", family = \"oswald\") # Enable custom font\nshowtext::showtext_auto()  \nshowtext::showtext_opts(dpi = 300)\n\nurl &lt;- \"https://en.wikipedia.org/wiki/Gordon_Ryan\" # Paste a link to Gordon Ryan's Wikipedia page\nread_page &lt;- read_html(url)                        # Feed url into function\nread_tables &lt;- html_table(read_page)[[4]]          # Pull win/loss table from table 4\n\ntime_series &lt;- read_tables |&gt;                      # Create separate year variable\n  mutate(year = stringr::str_extract(Year, \"\\\\d\\\\d\\\\d\\\\d\")) |&gt; # Extract year\n  group_by(year) |&gt;                                      # Group by year and type\n  dplyr::summarise(total_count = n(),                    # Generate summary counts\n                   win_count = sum(Result==\"Win\")) |&gt; \n  pivot_longer(cols = c(\"total_count\", \"win_count\")) |&gt;  # Reshape to tidy format\n  mutate(name = factor(name,                             # Edit variable labels\n                       levels = c(\"win_count\", \"total_count\"),\n                       label = c(\"Wins\", \"Total Matches\")),\n         year = as.numeric(year))                        # Make year numeric from char\n\nggplot(time_series,                                     #Plot data\n       aes(x = year,                                    # Set aesthetics\n           y = value,\n           color = name)) +\n  geom_line(linewidth = 1.5,                              # Line geom\n            position = position_dodge(width = 0.2)) + # Add some dodge to help w/overlap\n  geom_point(size = 3.0,                                  # Point geom\n             position = position_dodge(width = 0.2)) +\n  scale_x_continuous(limits = c(2012, 2022),              # Customize scale\n                     breaks = seq(2012, 2022, 1)) +\n  flynnprojects::theme_flynn(base_family = \"oswald\") +\n  viridis::scale_color_viridis(option = \"turbo\",\n                               discrete = TRUE,\n                               begin = 0.1,\n                               end = 1.0) +\n  labs(x = \"Year\",\n       y = \"Count\",\n       color = \"Count\",\n       title = \"Gordon Ryan's Wins and Total Matches, 2012—2022\")"
+  },
+  {
+    "objectID": "ks-computer-science.html#publish-websites",
+    "href": "ks-computer-science.html#publish-websites",
+    "title": "Computer Science and the Social Sciences",
+    "section": "Publish Websites",
+    "text": "Publish Websites"
   }
 ]

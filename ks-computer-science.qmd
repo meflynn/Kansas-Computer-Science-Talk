@@ -1,6 +1,6 @@
 ---
-title: "Computer Science Teacher’s Association"
-subtitle: "Computer Science and the Social Sciences"
+title: "Computer Science and the Social Sciences"
+subtitle: "Prepared for the 2023 meeting of the Computer Science Teacher’s Association"
 author: 
   - Michael Flynn
 institute:
@@ -20,10 +20,15 @@ format:
     #incremental: true
 title-slide-attributes:
     data-background-image: "ksu-seal.png"
-    data-background-size: 45%
+    data-background-size: 45% 
     data-background-position: bottom -38% right -19%
-    height: 700
-    width: 1050
+    #data-background-size: 750px 750px
+    #data-background-position: 1000px 370px
+    #data-background-position: 115% 150%
+    #data-background-position: 115% 140%
+    #data-background-position: 19em 8em
+    #height: 700
+    #width: 1050
 ---
 
 
@@ -43,9 +48,18 @@ basesize <- 11
 ```
 
 
+
 ## Overview
 
-### About me:
+  - A little bit of background about me 
+  - Talk about what my workflow looks like
+  - Show which languages/software works with various stages
+  - Examples
+
+
+## About me
+
+Some background info:
 
 ::::{.columns}
 :::{.column width="50%"}
@@ -65,7 +79,38 @@ basesize <- 11
 ::::
 
 
+
+
 # Social Science Workflow
+
+## Goals
+
+### What is it we want to do?
+
+A few things:
+
+  - Answer some question about the world
+  - Causal inference
+  - Description
+  - Prediction
+
+Regardless of specifics we want to make our work...
+
+  - Verifiable
+  - Reproducible (Someone can get the same results by using our data)
+  - Replicable (Someone can get the consistent results using new/different data)
+
+
+## Methods
+
+### How do we do what we do?
+
+In my case...
+
+- Lots of statistical data analysis
+- Requires wrangling large amounts of data (Typically looks like a spreadsheet)
+- Analyzing that data
+- Writing up articles or reports based on results
 
 
 ## A Disclaimer
@@ -145,3 +190,147 @@ basesize <- 11
 ## Social Science Workflow?
 
 ![](./images/hex-stickers.png){width=45% fig-pos="center"}
+
+
+## Social Science Workflow?
+
+### Reasons to like R
+
+::::{.columns}
+:::{.column}
+:::{.small}
+  - It's free!
+  - Open source
+  - Widely used in academia, government, industry, etc.
+  - Accessible
+  - Statistical analysis
+  - Writing
+  - Distribution
+  - Web scraping
+  - Data management
+  - Integrates with several other languages
+:::
+:::
+
+:::{.column}
+![](./images/rstudio-logo.png){width=80% fig-pos="center"}
+:::
+::::  
+  
+
+
+# Stuff You Can Do With R!
+
+## Data Analysis
+
+You can make great slides like these with Quarto, and even include code chunks and output!
+
+
+```{r example-1}
+#| echo: true
+#| fig-pos: "center"
+#| output-location: column
+library(flynnprojects) # Load library for theme
+library(tidyverse) # Load tidyverse
+
+data <- tibble(x = rnorm(n = 1e4, # Generate some fake data. 10k obs with mean at 0 and standard deviation of 2
+                         mean = 0,
+                         sd = 2))
+
+ggplot(data, aes(x = x)) + # Plot the data
+  geom_density() +
+  theme_flynn() +
+  labs(x = "x",
+       y = "Density")
+
+```
+
+
+
+
+## Maps
+
+```{r}
+#| output-location: column
+#| echo: true
+
+library(sf)
+#devtools::install_github("UrbanInstitute/urbnmapr")
+library(urbnmapr)
+
+map <- get_urbn_map(map = "counties",
+                    sf = TRUE)
+
+ggplot() +
+  geom_sf(data = map, 
+          aes(geometry = geometry,
+              fill = state_abbv == "KS")) +
+  guides(fill = "none") +
+  theme_void() + 
+  viridis::scale_fill_viridis(discrete = TRUE,
+                              option = "magma",
+                              begin = 0.2,
+                              end = 0.9,
+                              direction = -1)
+```
+
+
+
+## Web Scraping
+
+```{r web-scraping}
+#| output-location: column
+#| echo: true
+library(flynnprojects)
+library(rvest) # Load rvest package for web scraping
+sysfonts::font_add_google("Oswald", family = "oswald") # Enable custom font
+showtext::showtext_auto()  
+showtext::showtext_opts(dpi = 300)
+
+url <- "https://en.wikipedia.org/wiki/Gordon_Ryan" # Paste a link to Gordon Ryan's Wikipedia page
+read_page <- read_html(url)                        # Feed url into function
+read_tables <- html_table(read_page)[[4]]          # Pull win/loss table from table 4
+
+time_series <- read_tables |>                      # Create separate year variable
+  mutate(year = stringr::str_extract(Year, "\\d\\d\\d\\d")) |> # Extract year
+  group_by(year) |>                                      # Group by year and type
+  dplyr::summarise(total_count = n(),                    # Generate summary counts
+                   win_count = sum(Result=="Win")) |> 
+  pivot_longer(cols = c("total_count", "win_count")) |>  # Reshape to tidy format
+  mutate(name = factor(name,                             # Edit variable labels
+                       levels = c("win_count", "total_count"),
+                       label = c("Wins", "Total Matches")),
+         year = as.numeric(year))                        # Make year numeric from char
+
+ggplot(time_series,                                     #Plot data
+       aes(x = year,                                    # Set aesthetics
+           y = value,
+           color = name)) +
+  geom_line(linewidth = 1.5,                              # Line geom
+            position = position_dodge(width = 0.2)) + # Add some dodge to help w/overlap
+  geom_point(size = 3.0,                                  # Point geom
+             position = position_dodge(width = 0.2)) +
+  scale_x_continuous(limits = c(2012, 2022),              # Customize scale
+                     breaks = seq(2012, 2022, 1)) +
+  flynnprojects::theme_flynn(base_family = "oswald") +
+  viridis::scale_color_viridis(option = "turbo",
+                               discrete = TRUE,
+                               begin = 0.1,
+                               end = 1.0) +
+  labs(x = "Year",
+       y = "Count",
+       color = "Count",
+       title = "Gordon Ryan's Wins and Total Matches, 2012—2022") 
+```
+
+
+
+## Publish Websites
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out.height: 500px
+
+knitr::include_url("https://www.m-flynn.com/")
+```
